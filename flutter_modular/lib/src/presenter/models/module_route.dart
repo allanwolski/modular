@@ -38,11 +38,7 @@ class ModuleRoute<T> extends ParallelRoute<T> {
     List<Middleware> middlewares = const [],
     Uri? uri,
     Map<Type, Module> innerModules = const {},
-  })  : assert(
-          !name.contains('/:'),
-          'ModuleRoute should not contain dynamic route',
-        ),
-        super(
+  }) : super(
           name: name,
           child: child,
           popCallback: popCallback,
