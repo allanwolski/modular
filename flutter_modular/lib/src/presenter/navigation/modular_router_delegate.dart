@@ -144,7 +144,7 @@ class ModularRouterDelegate extends RouterDelegate<ModularBook>
     } else {
       final list = [...currentConfiguration!.routes];
 
-      for (final route in book.routes.reversed) {
+      for (final route in book.routes) {
         if (list
                 .firstWhere(
                     (element) => element.uri.toString() == route.uri.toString(),
@@ -185,7 +185,7 @@ class ModularRouterDelegate extends RouterDelegate<ModularBook>
     } else {
       final list = currentRoutes..removeLast();
 
-      for (final route in book.routes.reversed) {
+      for (final route in book.routes) {
         if (list
                 .firstWhere(
                     (element) => element.uri.toString() == route.uri.toString(),
